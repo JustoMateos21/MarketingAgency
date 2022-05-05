@@ -60,35 +60,66 @@ const captchaValidation= ()=>{
       }
 }
 
-nameInput.addEventListener('keypress', () =>{
-    nombreV.classList.add("colorverde")
-    if(nameInput.value.length() < 3)
-    nombreV.classList.remove("colorverde")
-})
+
 
 nameInput.addEventListener('keypress', () =>{
-    while(nameInput.value.length > 3 && nameInput.value.length <15){
-        nombreCarac.classList.add("colorverde")
-    }
-    // for(let i=0 ; i < 10; i++) {
-    //     if(nameInput.value.length >3){
-    //         nombreCarac.classList.add("colorverde")
-    //     }
-    // }
-    // if(nameInput.value.length > 2){
-    //     nombreCarac.classList.add("colorverde")
-    // }
-    // else{
-    //     nombreCarac.classList.remove("colorverde")
-    // }
+        nombreV.classList.add("colorverde")
 })
 
+nameInput.addEventListener('keydown', () =>{
+    const minCaract= 0;
+    if(nameInput.value.length <2){
+       nombreV.classList.remove("colorverde")
+     }
+})
+
+
+nameInput.addEventListener('keypress', () =>{
+    if(nameInput.value.length > 2){
+       nombreCarac.classList.add("colorverde")
+     }
+})
+
+nameInput.addEventListener('keydown', () =>{
+    if(nameInput.value.length < 4){
+       nombreCarac.classList.remove("colorverde")
+     }
+})
 
 correoInput.addEventListener('keypress', () =>{
-    emailV.classList.add("colorverde")
+    if(correoInput.value.length !== 0){
+        emailV.classList.add("colorverde")
+      }
+})
+
+correoInput.addEventListener('keydown', () =>{
+    if(correoInput.value.length < 2){
+        emailV.classList.remove("colorverde")
+      }
+})
+
+correoInput.addEventListener('keypress', () =>{
+    var cont=0;
+	for (var i = 0, j = correoInput.length; i < j; i++) {
+	 if(correoInput.value.indexOf(i) === "@"){
+	//  cont++;
+     emailV.classList.add("colorverde")
+	  }
+	}
+})
+
+correoInput.addEventListener('keydown', () =>{
+    var cont=0;
+	for (var i = 0, j = correoInput.length; i < j; i++) {
+	 if(correoInput[i] !== "@"){
+	 cont++;
+     emailV.classList.add("colorverde")
+	  }
+	}
 })
 
 
+//VALIDACION FORMULARIO
 form.addEventListener('submit', (e) =>{
     let messages= [] 
   if(nameInput.value === '' || nameInput.value === null){
