@@ -15,5 +15,52 @@
         <a href="reseñas.html" class="nav__link">Reseñas</a>
         <a href="contacto.html" class="nav__link">Contacto</a>
     </nav>
+<header class="header"></header>
+
+
+<form action="" class="form" id="form">
+   <div class="form__container">
+       <div id="error"></div>
+    <label for="nombre">Nombre</label>
+    <input type="text" name="nombre" id="name">
+    <label for="correo">Correo electronico</label>
+    <input type="text" name="correo" id="correo">
+
+<label for="rubros">Selecciona tu emprendimiento</label>
+    <select name="rubros" id="">
+        <option value="">Restaurante</option>
+        <option value="">Productora de eventos</option>
+        <option value="">Barber shops</option>
+        <option value="">Centros de entrenamientos</option>
+        <option value="">Oficinas coworking</option>
+        <option value="">Administración de viviendas</option>
+        <option value="">Food Trucks</option>
+        <option value="">Otro</option>
+    </select>
+
+    <label for="">¿Que resultados te gustaria obtener?</label>
+    <textarea class="form__textarea" id="inputResultados"></textarea>
+    <button id="formBtn">Enviar</button>
+   </div>
+
+<div class="checkbox__container">
+    <h3 class="validado" id="nombreValidado">Nombre</h3>
+    <h3 class="validado" id="emailValidado">Email</h3>
+    <h3 class="validado" id="nombreCaract">Nombre +3 caracteres</h3>
+    <h3 class="validado" id="emailExample">Email tipo example@mail.com</h3>
+</div>
+
+     <!-- CAPTCHA  -->
+    <div class="captcha__container" id="captchaCnt" >
+        <div class="img__container" id="imgContainer">
+    </div>
+            <h3>Por favor, escribi las letras de la imagen, debajo.</h3>
+            <input type="text" id="userInput" name="txt" placeholder="texto" >
+            <h3 class="hidden" id="captchaAlert">Texto incorrecto</h3>
+    </div>
+    <!-- CAPTCHA -->
+
+</form>
+<script src="app.js"></script>
 </body>
 </html>
