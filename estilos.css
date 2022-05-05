@@ -72,7 +72,7 @@ body{
     width: 100%;
     margin-right: 0;
     margin-top: -50px;
-    background-image: url(./imagenes/header3.jpg);
+    background-image: url(./imagenes/header1.jpg);
     background-size: cover;
     justify-content: flex-start;
     align-items: center;
@@ -96,4 +96,110 @@ body{
     height: 900px;
     display: flex;
     background-color: rgb(139, 139, 139);
+}
+
+.form{
+    display: flex;
+    width: 100%;
+    height: 800px;
+    background-color: rgba(0, 0, 0, 0.795);
+}
+
+.form__container{
+    display: flex;
+    height: 50%;
+    width: 45%;
+    margin-left: 40px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    justify-self: flex-start;
+}
+
+.form__container input, select, textarea{
+    border: none;
+    outline: none;
+    background: none;
+    border-bottom: 2px solid rgb(140, 200, 240);
+}
+
+.form__container select{
+    background-color: rgb(104, 104, 104);
+}
+
+.form__container input{
+    color: rgb(219, 219, 219);
+}
+
+.form__container label{
+    color: rgb(255, 255, 255);
+    margin-top: 40px;
+}
+
+.form__container input, select, textarea{
+    margin-top: 5px;
+}
+
+.form__container select{
+    color: rgb(255, 255, 255);
+}
+
+.form button{
+margin-top: 20px
+}
+
+.form__textarea{
+resize: none;
+}
+
+.hidden{
+    display: none;
+}
+
+.captcha__container{
+    display: flex;
+    margin-bottom: 20px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+    flex-direction: column;
+}
+
+.img__container{
+     display: flex;
+     height: 100px;
+     width: 35%;
+ }
+
+.imgcaptcha{
+    display: flex;
+    height: 100%;
+    max-width: 100%;
+} 
+
+.textalert{
+    color: rgb(173, 9, 9);
+}
+
+.checkbox__container{
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    margin-top: 20px;
+}
+
+.checkbox__container {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.validado{
+    color: rgb(141, 141, 141);
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.colorverde{
+    color: rgb(62, 185, 144);
 }
